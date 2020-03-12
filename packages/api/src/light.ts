@@ -15,7 +15,7 @@ export function tunOffAll() {
 }
 
 export function turnOn(light: number) {
-  if (getState(getGpioPin(light))) {
+  if (getState(light)) {
     // Already turned on!
     return;
   }
@@ -24,7 +24,7 @@ export function turnOn(light: number) {
 }
 
 export function turnOff(light: number) {
-  if (!getState(getGpioPin(light))) {
+  if (!getState(light)) {
     // Already turned off!
     return;
   }
