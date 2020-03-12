@@ -7,8 +7,8 @@ export const Lights: FunctionComponent = () => {
     <Paper elevation={6}>
       <List>
         <Light id={1} name="Licht 1" />
-        <Light id={2} name="Licht 1" />
-        <Light id={3} name="Licht 1" />
+        <Light id={2} name="Licht 2" />
+        <Light id={3} name="Licht 3" />
       </List>
     </Paper>
   );
