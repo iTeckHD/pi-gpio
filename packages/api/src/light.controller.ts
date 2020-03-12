@@ -25,7 +25,7 @@ lightController.post("/api/lights/:light/_turnOn", ctx => {
       throw new Error("Light is not a number");
     }
 
-    console.log("Turining on light number: ", ctx.params.light);
+    console.log("Turning on light number: ", ctx.params.light);
 
     turnOn(parseInt(ctx.params.light, 10));
 
@@ -42,7 +42,7 @@ lightController.post("/api/lights/:light/_turnOff", ctx => {
     if (isNaN(ctx.params.light)) {
       throw new Error("Light is not a number");
     }
-    console.log("Turining off light number: ", ctx.params.light);
+    console.log("Turning off light number: ", ctx.params.light);
 
     turnOff(parseInt(ctx.params.light, 10));
 
@@ -60,7 +60,7 @@ lightController.post("/api/lights/:light/_toggle", ctx => {
       throw new Error("Light is not a number");
     }
 
-    console.log("Toggeling light number: ", ctx.params.light);
+    console.log("Toggling light number: ", ctx.params.light);
 
     if (!getState(ctx.params.light)) {
       turnOff(parseInt(ctx.params.light, 10));
