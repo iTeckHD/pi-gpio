@@ -62,7 +62,7 @@ lightController.post("/api/lights/:light/_toggle", ctx => {
 
     console.log("Toggeling light number: ", ctx.params.light);
 
-    if (getState(ctx.params.light)) {
+    if (!getState(ctx.params.light)) {
       turnOff(parseInt(ctx.params.light, 10));
     } else {
       turnOn(parseInt(ctx.params.light, 10));
