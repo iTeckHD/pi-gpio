@@ -10,7 +10,7 @@ lightController.get("api/lights/:light", ctx => {
     }
 
     ctx.status = 200;
-    ctx.body = getState(ctx.params.light);
+    ctx.body = getState(parseInt(ctx.params.light, 10));
   } catch (err) {
     ctx.status = 500;
     ctx.body = err;
@@ -23,7 +23,7 @@ lightController.post("api/lighs/:light/_turnOn", ctx => {
       throw new Error("Light is not a number");
     }
 
-    turnOn(ctx.params.light);
+    turnOn(parseInt(ctx.params.light, 10));
 
     ctx.status = 200;
     ctx.body = null;
@@ -39,7 +39,7 @@ lightController.post("api/lighs/:light/_turnOff", ctx => {
       throw new Error("Light is not a number");
     }
 
-    turnOff(ctx.params.light);
+    turnOff(parseInt(ctx.params.light, 10));
 
     ctx.status = 200;
     ctx.body = null;
