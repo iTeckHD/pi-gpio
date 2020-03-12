@@ -40,14 +40,14 @@ export const Light: FunctionComponent<Props> = props => {
   const classes = useStyles();
 
   React.useEffect(() => {
-    if (!loading && payload) {
+    if (!loading && payload !== void 0 && payload !== null) {
       setChecked(payload);
     }
   }, [loading]);
 
   const handleClick = async () => {
     const result = await mutate({});
-    if (result.status === 200) {
+    if (result.status && result.status < 500) {
       query();
     }
   };
