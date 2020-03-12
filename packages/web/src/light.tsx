@@ -12,6 +12,9 @@ import clsx from "clsx";
 
 const useStyles = makeStyles(theme => ({
   bulb: {
+    "-webkit-transition": "color 0.75s",
+    "-moz-transition": "color 0.75s",
+    "-o-transition": "color 0.75s",
     transition: "color 0.75s"
   },
   on: {
