@@ -3,7 +3,7 @@ import { turnOn, turnOff, getState } from "./light";
 
 export const lightController = new Router();
 
-lightController.get("api/lights/:light", ctx => {
+lightController.get("/api/lights/:light", ctx => {
   try {
     if (isNaN(ctx.params.light)) {
       throw new Error("Light is not a number");
@@ -17,7 +17,7 @@ lightController.get("api/lights/:light", ctx => {
   }
 });
 
-lightController.post("api/lighs/:light/_turnOn", ctx => {
+lightController.post("/api/lighs/:light/_turnOn", ctx => {
   try {
     if (isNaN(ctx.params.light)) {
       throw new Error("Light is not a number");
@@ -33,7 +33,7 @@ lightController.post("api/lighs/:light/_turnOn", ctx => {
   }
 });
 
-lightController.post("api/lighs/:light/_turnOff", ctx => {
+lightController.post("/api/lighs/:light/_turnOff", ctx => {
   try {
     if (isNaN(ctx.params.light)) {
       throw new Error("Light is not a number");
@@ -49,7 +49,7 @@ lightController.post("api/lighs/:light/_turnOff", ctx => {
   }
 });
 
-lightController.post("api/lighs/:light/_toggle", ctx => {
+lightController.post("/api/lighs/:light/_toggle", ctx => {
   try {
     if (isNaN(ctx.params.light)) {
       throw new Error("Light is not a number");
