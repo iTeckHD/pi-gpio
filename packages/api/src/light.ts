@@ -15,7 +15,7 @@ export function tunOffAll() {
 }
 
 export function turnOn(light: number) {
-  if (rpio.read(getGpioPin(light))) {
+  if (getState(getGpioPin(light))) {
     // Already turned on!
     return;
   }
@@ -24,7 +24,7 @@ export function turnOn(light: number) {
 }
 
 export function turnOff(light: number) {
-  if (!rpio.read(getGpioPin(light))) {
+  if (!getState(getGpioPin(light))) {
     // Already turned off!
     return;
   }
