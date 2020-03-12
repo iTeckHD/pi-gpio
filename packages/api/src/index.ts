@@ -11,7 +11,7 @@ app.use(bodyParser());
 app.use(lightController.routes());
 app.use(lightController.allowedMethods());
 
-app.listen(8022, "0.0.0.0", () => {
+app.listen(8081, "0.0.0.0", () => {
   console.log("Api Server started");
   initialize();
   console.log("Lights initialized");
