@@ -33,7 +33,7 @@ export function turnOff(light: number) {
 }
 
 export function getState(light: number) {
-  return Boolean(rpio.read(getGpioPin(light)));
+  return !Boolean(rpio.read(getGpioPin(light)));
 }
 
 function getGpioPin(light: number) {
