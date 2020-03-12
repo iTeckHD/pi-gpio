@@ -4,7 +4,8 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rm -rf dist && tsc"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "12.12.2",
-    "@types/koa": "2.0.45",
+    "@types/koa": "2.11.0",
     "@types/koa-bodyparser": "4.2.0",
     "@types/koa-router": "7.0.28",
     "@types/koa__cors": "3.0.1",
