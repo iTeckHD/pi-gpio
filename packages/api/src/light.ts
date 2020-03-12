@@ -1,6 +1,6 @@
 import rpio from "rpio";
 
-const gpioPins = [20, 21, 26];
+const gpioPins = [38, 40, 37];
 
 export function initialize() {
   gpioPins.forEach(pin => rpio.open(pin, rpio.OUTPUT, rpio.LOW));
