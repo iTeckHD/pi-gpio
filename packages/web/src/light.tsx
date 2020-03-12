@@ -3,8 +3,6 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
-  ListItemSecondaryAction,
-  Switch,
   makeStyles
 } from "@material-ui/core";
 import EmojiObjectsIcon from "@material-ui/icons/EmojiObjects";
@@ -48,11 +46,10 @@ export const Light: FunctionComponent<Props> = props => {
   }, [loading]);
 
   const handleClick = async () => {
-    setChecked(!checked);
-    // const result = await mutate({});
-    // if (result.status === 200) {
-    //   query();
-    // }
+    const result = await mutate({});
+    if (result.status === 200) {
+      query();
+    }
   };
 
   return (
